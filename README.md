@@ -1,1 +1,5 @@
-`ln -s ~/dotfiles/nvim ~/.config/nvim`
+```sh
+ln -s ~/dotfiles/nvim ~/.config/nvim
+```
+
+

@@ -156,6 +156,7 @@ return {
           clangd = {},
           bashls = {},
           awk_ls = {},
+          marksman = {},
         },
 
         setup = {},
