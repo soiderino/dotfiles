@@ -9,4 +9,4 @@ value=3
 sudo sh -c "sync; echo $value > /proc/sys/vm/drop_caches"
 echo "cleaned ram."
 
-exit 0 # exiting successfully
+exit 0
