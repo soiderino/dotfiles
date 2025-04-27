@@ -7,11 +7,11 @@ font pango:Misc Tamsyn 9
 gaps inner 10
 gaps top 25
 
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper2.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper1.jpg
 
-exec --no-startup-id ~/.config/i3/scripts/fix-mouse-sens.sh
-exec --no-startup-id ~/.config/i3/scripts/layout.sh
-exec_always --no-startup-id ~/.config/i3/scripts/polybar.sh
+exec_always --no-startup-id ~/.config/i3/scripts/fix-mouse-sens.sh
+exec_always --no-startup-id ~/.config/i3/scripts/layout.sh
+exec --no-startup-id ~/.config/i3/scripts/polybar.sh
 
 bindsym $mod+Shift+s exec scrot -s -f - | xclip -selection clipboard -t image/png
 
@@ -115,9 +115,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-for_window [floating] border pixel 1, resize set 600 480
-
-# for_window [class="Alacritty"] floating enable
+for_window [floating] border pixel 1
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="discord"] floating enable
 
@@ -126,20 +124,17 @@ title_align center
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
 
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
