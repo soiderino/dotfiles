@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="dst" # set by `omz`
+ZSH_THEME="eastwood" # set by `omz`
 
 plugins=(git)
 
