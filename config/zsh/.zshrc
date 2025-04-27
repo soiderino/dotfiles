@@ -46,8 +46,8 @@ alias grep="rg"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vim="nvim"
-alias neofetch="clear;~/Documents/scripts/fetch"
-alias cleanram="clear;~/Documents/scripts/cache-clean"
+alias neofetch="clear;~/.config/i3/scripts/fetch"
+alias cleanram="clear;~/.config/i3/scripts/cache-clean"
 
 # fnm
 FNM_PATH="/home/soiderino/.local/share/fnm"
