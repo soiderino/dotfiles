@@ -3,7 +3,7 @@
 status=$(playerctl --player=spotify status 2>/dev/null)
 
 if [ "$status" = "Playing" ]; then
-  icon=""
+  icon=""
 elif [ "$status" = "Paused" ]; then
   icon=""
 else
