@@ -157,6 +157,7 @@ return {
           bashls = {},
           awk_ls = {},
           marksman = {},
+          cmake = {},
         },
 
         setup = {},
