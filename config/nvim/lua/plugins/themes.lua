@@ -1,8 +1,7 @@
 return {
-	'datsfilipe/vesper.nvim',
-	opts = function()
-		-- goofiest method ever
-		vim.cmd.colorscheme('vesper')
-		vim.cmd([[ highlight Normal guifg=NONE guibg=NONE ]])
-	end,
+  'Shatur/neovim-ayu',
+  config = function()
+    vim.cmd.colorscheme('ayu')
+    vim.cmd([[ highlight Normal guifg=NONE guibg=NONE ]])
+  end,
 }
