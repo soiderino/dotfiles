@@ -11,6 +11,12 @@ return {
     },
   },
 
+  {
+    'echasnovski/mini.surround',
+    version = '*',
+    opts = {},
+  },
+
   -- comments
   {
     'numToStr/Comment.nvim',
