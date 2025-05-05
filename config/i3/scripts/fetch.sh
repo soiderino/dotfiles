@@ -44,7 +44,4 @@ ${lc}mem: ${ic}${mem}
 ${lc}weather: ${ic}$condition (${temperature} ${humidity})
 
 
-
-
-
 EOF
