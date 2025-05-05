@@ -82,29 +82,6 @@ return {
   },
 
   {
-    'folke/noice.nvim',
-    event = 'VeryLazy',
-    opts = {
-      cmdline = {
-        format = {
-          cmdline = { icon = '>' },
-        },
-      },
-    },
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-      {
-        'rcarriga/nvim-notify',
-        opts = {
-          background_colour = '#000000',
-          render = 'minimal',
-          stages = 'static',
-        },
-      },
-    },
-  },
-
-  {
     'nvim-neo-tree/neo-tree.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',

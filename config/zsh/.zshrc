@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="eastwood" # set by `omz`
+ZSH_THEME="example" # set by `omz`
 
 plugins=(git)
 
@@ -43,11 +43,12 @@ alias lt="ls --tree --git-ignore"
 alias cat="bat --paging=never --style=plain --theme=ansi"
 alias more="bat --paging=always --theme=ansi"
 alias zshconfig="vim ~/.zshrc"
-# alias grep="rg"
+alias grep="rg"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vim="nvim"
 alias neofetch="clear;~/.config/i3/scripts/fetch.sh"
 alias cleanram="clear;~/.config/i3/scripts/cache-clean.sh"
+alias offpc="systemctl poweroff"
 
 # fnm
 FNM_PATH="/home/soiderino/.local/share/fnm"

@@ -5,7 +5,8 @@ live_config_reload = true
 padding = { x = 10, y = 10 }
 
 [font]
-normal = { family = "Misc Tamsyn" }
+# normal = { family = "Misc Tamsyn" }
+normal = { family = "Iosevka Nerd Font" }
 size = 9
 
 [cursor]
