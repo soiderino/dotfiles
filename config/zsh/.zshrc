@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="example" # set by `omz`
+# https://github.com/gdsrosa/minimal_improved
+ZSH_THEME="minimal_improved"
 
 plugins=(git)
 
