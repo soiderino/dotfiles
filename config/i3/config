@@ -2,13 +2,9 @@
 set $mod Mod4
 
 # font for window titles
-font pango:Misc Tamsyn 9
+font pango:CaskaydiaMono Nerd Font SemiBold 8
 
-gaps inner 10
-gaps top 25
-
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper1.jpg
-exec --no-startup-id ~/.config/i3/scripts/polybar.sh
+gaps inner 5
 
 exec_always --no-startup-id ~/.config/i3/scripts/fix-mouse-sens.sh
 exec_always --no-startup-id ~/.config/i3/scripts/layout.sh
@@ -33,7 +29,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec --no-startup-id dmenu_run -fn "Misc Tamsyn:size=10"
+bindsym $mod+d exec --no-startup-id dmenu_run -fn "CaskaydiaMono Nerd Font Mono-9"
 
 # change focus
 bindsym $mod+h focus left
@@ -150,3 +146,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bar {
+  status_command i3status
+  position top
+}

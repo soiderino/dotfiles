@@ -158,6 +158,9 @@ return {
           awk_ls = {},
           marksman = {},
           cmake = {},
+          svelte = {},
+          cssls = {},
+          tailwindcss = {},
         },
 
         setup = {},
