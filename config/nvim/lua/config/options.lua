@@ -1,6 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
 vim.g.have_nerd_font = false
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
@@ -25,6 +27,8 @@ vim.opt.list = true
 vim.opt.inccommand = 'split'
 vim.opt.scrolloff = 10
 vim.opt.confirm = true
+
+vim.o.completeopt = 'menuone,noselect'
 
 -- horrible features
 vim.opt.backup = false

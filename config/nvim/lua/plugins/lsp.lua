@@ -16,28 +16,63 @@ return {
   {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      'saadparwaiz1/cmp_luasnip',
+      'L3MON4D3/LuaSnip',
+    },
     config = function()
       local cmp = require('cmp')
+      local luasnip = require('luasnip')
 
       cmp.setup({
         sources = {
           { name = 'nvim_lsp' },
+          { name = 'luasnip' },
+        },
+        {
+          { name = 'buffer' },
+          { name = 'path' }
         },
 
         mapping = cmp.mapping.preset.insert({
           ['<c-space>'] = cmp.mapping.complete(),
-          ['<c-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<c-d'] = cmp.mapping.scroll_docs(4),
+          ['<c-[>'] = cmp.mapping.scroll_docs(-4),
+          ['<c-]>'] = cmp.mapping.scroll_docs(4),
+          ['<cr>'] = cmp.mapping.confirm({ select = true })
         }),
 
         snippet = {
           expand = function(args)
             vim.snippet.expand(args.body)
+            luasnip.lsp_expand(args.body)
           end,
         },
       })
+
+      cmp.setup.cmdline('/', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'buffer' }
+        }
+      })
+
+      cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = 'path' }
+        }, {
+          { name = 'cmdline' }
+        })
+      })
     end,
   },
+
+  -- cmake integration
+  'Civitasv/cmake-tools.nvim',
 
   -- formatter
   {
@@ -91,7 +126,7 @@ return {
         ---@type vim.diagnostic.Opts
         diagnostics = {
           underline = true,
-          update_in_insert = false,
+          update_in_insert = true,
           virtual_text = {
             spacing = 4,
             source = 'if_many',
@@ -110,7 +145,7 @@ return {
 
         inlay_hints = {
           enabled = true,
-          exclude = { 'vue' },
+          -- exclude = { 'vue' },
         },
 
         codelens = {
@@ -157,8 +192,10 @@ return {
           bashls = {},
           awk_ls = {},
           marksman = {},
+          astro = {},
           cmake = {},
           svelte = {},
+          ts_ls = {},
           cssls = {},
           tailwindcss = {},
         },
@@ -196,6 +233,7 @@ return {
 
       require('mason-lspconfig').setup({
         ensure_installed = ensure_installed,
+        automatic_enable = true,
         automatic_installation = true,
         handlers = {
           setup,

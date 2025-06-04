@@ -12,6 +12,16 @@ return {
   },
 
   {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    opts = {
+      size = 55,
+      open_mapping = [[<c-\>]],
+      direction = "float"
+    }
+  },
+
+  {
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
     dependencies = {

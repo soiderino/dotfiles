@@ -14,7 +14,9 @@ return {
   {
     'echasnovski/mini.surround',
     version = '*',
-    opts = {},
+    opts = {
+
+    },
   },
 
   -- comments
@@ -23,6 +25,11 @@ return {
     lazy = false,
     opts = {
       padding = true,
+      sticky = false,
+      toggler = {
+        line = 'gcc',
+        block = 'gbc'
+      },
     },
   },
 }
